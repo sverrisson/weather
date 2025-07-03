@@ -8,7 +8,6 @@ from mcp.server.fastmcp import FastMCP
 
 # Initialize server
 mcp = FastMCP("weather")
-print("Server initialized!")
 
 # Constants
 NWS_API_BASE = "https://api.weather.gov"
@@ -102,6 +101,5 @@ Forecast: {period['detailedForecast']}
 
 # Initialize and run server
 if __name__ == "__main__":
-    print("Starting server")
     mcp.run(transport='stdio')
-    print("Server running")
+    print("Server running!")

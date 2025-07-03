@@ -2,8 +2,13 @@ from typing import Any
 import httpx
 from mcp.server.fastmcp import FastMCP
 
+# Setup and run
+# source .venv/bin/activate
+# uv add "mcp[cli]" httpx
+
 # Initialize server
 mcp = FastMCP("weather")
+print("Server initialized!")
 
 # Constants
 NWS_API_BASE = "https://api.weather.gov"
@@ -97,4 +102,6 @@ Forecast: {period['detailedForecast']}
 
 # Initialize and run server
 if __name__ == "main":
+    print("Starting server")
     mcp.run(transport='stdio')
+    print("Server running")
